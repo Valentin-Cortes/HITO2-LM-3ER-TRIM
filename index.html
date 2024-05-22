@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la Encuesta</title>
+    <link rel="shortcut icon" href="sleeping.png">
+</head>
+<body>
+    <img src="sleeping.png" alt="Icono de dormir" style="display: block; margin: 0 auto; margin-top: 10px; width: 100px;">
+    <h1>Resultados de la Encuesta</h1>
+    <h2>¿Qué tan mala es tu calidad de sueño?</h2>
+
+    <div id="filtro-container">
+        <label for="filtro-sexo">Sexo:</label>
+        <select id="filtro-sexo">
+            <option value="Todos">Todos</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="No binario">No binario</option>
+        </select>
+
+        <label for="filtro-grado">Grado:</label>
+        <select id="filtro-grado">
+            <option value="Todos">Todos</option>
+            <option value="ASIR">ASIR</option>
+            <option value="DAM">DAM</option>
+            <option value="Empresariales">Empresariales</option>
+        </select>
+
+        <label for="filtro-edad">Edad:</label>
+        <select id="filtro-edad">
+            <option value="Todos">Todos</option>
+            <option value="Menor de 18 años">Menor de 18 años</option>
+            <option value="18 - 24 años">18 - 24 años</option>
+            <option value="24 - 32 años">24 - 32 años</option>
+            <option value="Más de 32 años">Más de 32 años</option>
+        </select>
+    </div>
+
+    <div id="selector-container">
+        <label for="encuestados">Selecciona el nombre:</label>
+        <select id="encuestados"></select>
+    </div>
+    
+    <div id="resultados-individuales"></div>
+
+    <br>   <br>   <br>
+
+    <div id="resultados-medios"></div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #89cfd1;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #filtro-container, #selector-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #filtro-container select, #encuestados {
+            padding: 8px;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+
+        #resultados-individuales {
+            h2 {
+                text-align: left;
+            }
+            margin-top: 20px;
+            text-align: left;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        
+
+        #resultados-medios {
+            h2 {
+            text-align: left;
+            }
+            margin-top: 20px;
+            text-align: left;
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .pregunta {
+            font-weight: bold;
+        }
+
+        .respuesta {
+            font-family: 'Consolas', sans-serif;
+        }
+
+        @media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        text-align: left;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters label {
+        flex: 1 1 auto;
+        margin: 5px 0;
+    }
+
+    select {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+}
+    </style>
+</body>
+</html>
+
